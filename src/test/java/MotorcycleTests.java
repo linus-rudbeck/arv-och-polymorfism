@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import se.distansakademin.vehicles.Motorcycle;
+import se.distansakademin.vehicles.Vehicle;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -30,6 +31,17 @@ public class MotorcycleTests {
         var expected = "My " + brand + " is traveling at " + speed + " km/h "
                 + "and has no sidecar";
         var actual = motorcycle.getMotorcycleInfo();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testAccelerateMotorcycle(){
+        var mc = new Motorcycle("Bose", 0, true);
+        mc.accelerate();
+
+        var expected = 15;
+        var actual = mc.getSpeed();
 
         assertEquals(expected, actual);
     }

@@ -14,4 +14,9 @@ public class Car extends Vehicle {
         String features = getFeatures();
         return features + " and has " + numberOfDoors + " doors";
     }
+
+    @Override
+    public void accelerate(){
+        speed += 10;
+    }
 }

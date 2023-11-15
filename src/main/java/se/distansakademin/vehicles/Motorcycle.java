@@ -12,4 +12,9 @@ public class Motorcycle extends Vehicle{
         var sideCarInfo = hasSidecar ? " and has sidecar" : " and has no sidecar";
         return getFeatures() + sideCarInfo;
     }
+
+    @Override
+    public void accelerate() {
+        speed += 15;
+    }
 }

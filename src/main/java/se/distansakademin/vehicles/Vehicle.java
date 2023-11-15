@@ -12,4 +12,12 @@ public class Vehicle {
     public String getFeatures(){
         return "My " + brand + " is traveling at " + speed + " km/h";
     }
+
+    public void accelerate(){
+        speed += 5;
+    }
+
+    public int getSpeed(){
+        return speed;
+    }
 }
