@@ -15,9 +15,37 @@ public class Main {
         System.out.println(carInfo);
 
         polymorphismDemo();
+        overrideDemo();
+        overloadDemo();
+    }
+
+    private static void overloadDemo() {
+        System.out.println("\n---- Overload ----");
+
+        Calculator calc = new Calculator();
+
+        System.out.println("Add two ints: " + calc.add(1,2));
+        System.out.println("Add three ints: " + calc.add(1,2, 3));
+        System.out.println("Add two doubles: " + calc.add(13.0, 0.4));
+    }
+
+    private static void overrideDemo() {
+        System.out.println("\n---- Override ----");
+        Vehicle vehicle = new Vehicle("Bussen", 25);
+        Car car = new Car("Bilen", 25, 5);
+        Motorcycle mc = new Motorcycle("Motorcykeln", 25, false);
+
+        vehicle.accelerate();
+        car.accelerate();
+        mc.accelerate();
+
+        System.out.println(vehicle.getFeatures());
+        System.out.println(car.getFeatures());
+        System.out.println(mc.getFeatures());
     }
 
     private static void polymorphismDemo() {
+        System.out.println("\n---- Polymorphism ---");
         // Create empty list of Vehicles
         List<Vehicle> vehicleList = new ArrayList<>();
 
@@ -46,4 +74,6 @@ public class Main {
         }
         // Get and print vehicle features
     }
+
+
 }
